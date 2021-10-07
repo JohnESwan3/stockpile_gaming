@@ -1,11 +1,11 @@
 export default {
-  name: 'game',
-  title: 'Game',
+  name: 'review',
+  title: 'Review',
   type: 'document',
   fields: [
     //   Game Information
     {
-      name: 'name',
+      name: 'gameName',
       title: 'Game Name',
       type: 'string',
     },
@@ -14,10 +14,8 @@ export default {
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'gameName',
         maxLength: 200, // will be ignored if slugify is set
-        slugify: (input) =>
-          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
       },
     },
     {
@@ -194,4 +192,10 @@ export default {
       type: 'url',
     },
   ],
+  preview: {
+    select: {
+      title: 'gameName',
+      media: 'cover',
+    },
+  },
 };

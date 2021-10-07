@@ -13,10 +13,8 @@ export default {
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'name',
         maxLength: 200, // will be ignored if slugify is set
-        slugify: (input) =>
-          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
       },
     },
     {
@@ -25,9 +23,18 @@ export default {
       type: 'text',
     },
     {
-      title: 'Profile Image',
-      name: 'profileImage',
+      title: 'Image',
+      name: 'image',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
   ],
+  preview: {
+    select: {
+      title: 'name',
+      media: 'profileImage',
+    },
+  },
 };

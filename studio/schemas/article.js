@@ -6,19 +6,30 @@ export default {
     {
       title: 'Article Name',
       name: 'articleName',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'string',
     },
     {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'articleName',
         maxLength: 200, // will be ignored if slugify is set
-        slugify: (input) =>
-          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
+    },
+    {
+      title: 'Main Image',
+      name: 'mainImage',
+      type: 'image',
+      options: {
+        hotspot: true,
       },
     },
   ],
+  preview: {
+    select: {
+      title: 'articleName',
+      media: 'mainImage',
+    },
+  },
 };
