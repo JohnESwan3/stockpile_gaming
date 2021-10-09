@@ -8,7 +8,7 @@ export default function AllReviews() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "document"]{
+        `*[_type == "reviews"]{
         gameName,
         slug,
         cover{

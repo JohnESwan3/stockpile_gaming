@@ -7,6 +7,7 @@ import ReviewPage from './components/ReviewPage.js';
 import AllArticles from './components/AllArticles.js';
 import ArticlePage from './components/ArticlePage.js';
 import About from './components/About.js';
+import Footer from './components/Footer.js';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route component={ArticlePage} path="/articles/:slug" />
         <Route component={About} path="/about" />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
