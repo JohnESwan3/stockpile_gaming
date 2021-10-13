@@ -1,11 +1,11 @@
 {
   "root": true,
+  "api": {
+    "projectId": "qc546n1u",
+    "dataset": "production"
+  },
   "project": {
     "name": "Stockpile Gaming"
-  },
-  "api": {
-    "projectId": "dowiucww",
-    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

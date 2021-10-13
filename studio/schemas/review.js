@@ -5,197 +5,343 @@ export default {
   fields: [
     //   Game Information
     {
-      name: 'gameName',
-      title: 'Game Name',
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
-      title: 'Slug',
       name: 'slug',
+      title: 'Slug',
       type: 'slug',
       options: {
-        source: 'gameName',
-        maxLength: 200, // will be ignored if slugify is set
+        source: 'title',
+        maxLength: 96,
       },
     },
     {
-      title: 'Release Date',
-      name: 'releaseDate',
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: { type: 'author' },
+    },
+    {
+      name: 'coverImage',
+      title: 'Cover image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'publishedOn',
+      title: 'Published On',
       type: 'date',
       options: {
         dateFormat: 'MM-DD-YYYY',
       },
     },
     {
-      title: 'Affiliate Link',
-      name: 'affiliateLink',
-      type: 'url',
+      name: 'releaseDate',
+      title: 'Release Date',
+      type: 'date',
+      options: {
+        dateFormat: 'MM-DD-YYYY',
+      },
     },
     {
-      title: 'Platforms Available',
-      name: 'platforms',
-      type: 'array',
-      of: [{ type: 'string' }],
-    },
-    {
-      title: 'Platform Reviewed On',
-      name: 'reviewedOn',
-      type: 'array',
-      of: [{ type: 'string' }],
-    },
-    {
-      title: 'Price At Publishing',
       name: 'price',
+      title: 'Price',
       type: 'string',
     },
     {
-      title: 'Cover',
-      name: 'cover',
-      type: 'image',
+      name: 'affiliate',
+      title: 'Affiliate Link',
+      type: 'url',
     },
     {
-      title: 'Background Image',
       name: 'bgImage',
+      title: 'Background Image',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
-
     {
-      title: 'Developer',
+      name: 'gameLogo',
+      title: 'Game Logo',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'hero',
+      title: 'Hero Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'headerImg',
+      title: 'Header Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'developer',
+      title: 'Developer',
       type: 'array',
       of: [{ type: 'string' }],
     },
     {
-      title: 'Publisher',
       name: 'publisher',
+      title: 'Publisher',
       type: 'array',
       of: [{ type: 'string' }],
     },
     {
-      title: 'Engine',
       name: 'engine',
-      type: 'array',
-      of: [{ type: 'string' }],
+      title: 'Engine',
+      type: 'string',
+    },
+    {
+      name: 'platforms',
+      title: 'Platforms',
+      type: 'string',
+      options: {
+        list: [
+          { value: 'steam', title: 'PC: Steam' },
+          { value: 'epic', title: 'PC: Epic Games Store' },
+          { value: 'other', title: 'PC: Other' },
+          { value: 'ps5', title: 'PS5' },
+          { value: 'ps4', title: 'PS4' },
+          { value: 'ps3', title: 'PS3' },
+          { value: 'psVita', title: 'PSVita' },
+          { value: 'psp', title: 'PSP' },
+          { value: 'xboxSeries', title: 'Xbox Series X|S' },
+          { value: 'xboxOne', title: 'Xbox One' },
+          { value: 'switch', title: 'Nintendo Switch' },
+          { value: '3ds', title: 'Nintendo 3DS' },
+        ],
+      },
+    },
+    {
+      name: 'reviewedOn',
+      title: 'Platform Reviewed On',
+      type: 'string',
+      options: {
+        list: [
+          { value: 'steam', title: 'PC: Steam' },
+          { value: 'epic', title: 'PC: Epic Games Store' },
+          { value: 'other', title: 'PC: Other' },
+          { value: 'ps5', title: 'PS5' },
+          { value: 'ps4', title: 'PS4' },
+          { value: 'ps3', title: 'PS3' },
+          { value: 'psVita', title: 'PSVita' },
+          { value: 'psp', title: 'PSP' },
+          { value: 'xboxSeries', title: 'Xbox Series X|S' },
+          { value: 'xboxOne', title: 'Xbox One' },
+          { value: 'switch', title: 'Nintendo Switch' },
+          { value: '3ds', title: 'Nintendo 3DS' },
+        ],
+      },
     },
     // Review Breakdown
     {
-      title: 'Article',
-      name: 'article',
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+    },
+    {
+      name: 'subText',
+      title: 'Sub-Text',
+      type: 'string',
+    },
+    {
+      name: 'subHeading1',
+      title: 'Sub-Heading1',
+      type: 'string',
+    },
+    {
+      name: 'article1',
+      title: 'Article Part 1',
       type: 'array',
       of: [{ type: 'block' }],
     },
     {
+      name: 'subHeading2',
+      title: 'Sub-Heading2',
+      type: 'string',
+    },
+    {
+      name: 'article2',
+      title: 'Article Part 2',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+    {
+      name: 'subHeading3',
+      title: 'Sub-Heading3',
+      type: 'string',
+    },
+    {
+      name: 'article3',
+      title: 'Article Part 3',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+    {
+      name: 'graphics',
       title: 'Graphics Review',
-      name: 'graphicsReview',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
-      title: 'Graphics Score',
       name: 'graphicsScore',
+      title: 'Graphics Score',
       type: 'number',
     },
     {
+      name: 'sound',
       title: 'Sound Review',
-      name: 'soundReview',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
-      title: 'Sound Score',
       name: 'soundScore',
+      title: 'Sound Score',
       type: 'number',
     },
     {
+      name: 'gameplay',
       title: 'Gameplay Review',
-      name: 'gameplayReview',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
-      title: 'Gameplay Score',
       name: 'gameplayScore',
+      title: 'Gameplay Score',
       type: 'number',
     },
     {
+      name: 'story',
       title: 'Story Review',
-      name: 'storyReview',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
-      title: 'Story Score',
       name: 'storyScore',
+      title: 'Story Score',
       type: 'number',
     },
     {
-      title: 'Review Summary',
-      name: 'reviewSummary',
-      type: 'text',
+      name: 'summary',
+      title: 'Summary',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
-      title: 'Review Score',
-      name: 'reviewScore',
+      name: 'score',
+      title: 'Score',
       type: 'number',
     },
-
     // Screenshots
     {
-      title: 'Screenshot 1',
       name: 'screenshot1',
+      title: 'Screenshot 1',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 2',
       name: 'screenshot2',
+      title: 'Screenshot 2',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 3',
       name: 'screenshot3',
+      title: 'Screenshot 3',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 4',
       name: 'screenshot4',
+      title: 'Screenshot 4',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 5',
       name: 'screenshot5',
+      title: 'Screenshot 5',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 6',
       name: 'screenshot6',
+      title: 'Screenshot 6',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 7',
       name: 'screenshot7',
+      title: 'Screenshot 7',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 8',
       name: 'screenshot8',
+      title: 'Screenshot 8',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 9',
       name: 'screenshot9',
+      title: 'Screenshot 9',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
-      title: 'Screenshot 10',
       name: 'screenshot10',
+      title: 'Screenshot 10',
       type: 'image',
-    },
-    {
-      title: 'Video',
-      name: 'video',
-      type: 'url',
+      options: {
+        hotspot: true,
+      },
     },
   ],
   preview: {
     select: {
-      title: 'gameName',
-      media: 'cover',
+      title: 'title',
+      author: 'author.name',
+      media: 'coverImage',
+      date: 'publishedOn',
+    },
+    prepare(selection) {
+      const { author } = selection;
+      return Object.assign({}, selection, {
+        subtitle: author && `by ${author}`,
+      });
     },
   },
 };

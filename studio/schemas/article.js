@@ -1,35 +1,60 @@
 export default {
-  title: 'Articles',
-  name: 'articles',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   fields: [
     {
-      title: 'Article Name',
-      name: 'articleName',
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
-      title: 'Slug',
       name: 'slug',
+      title: 'Slug',
       type: 'slug',
       options: {
-        source: 'articleName',
-        maxLength: 200, // will be ignored if slugify is set
+        source: 'title',
+        maxLength: 96,
       },
     },
     {
-      title: 'Main Image',
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: { type: 'author' },
+    },
+    {
       name: 'mainImage',
+      title: 'Main image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
+    {
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'date',
+    },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
   ],
+
   preview: {
     select: {
-      title: 'articleName',
+      title: 'title',
+      author: 'author.name',
       media: 'mainImage',
+      date: 'publishedAt',
+    },
+    prepare(selection) {
+      const { author } = selection;
+      return Object.assign({}, selection, {
+        subtitle: author && `by ${author}`,
+      });
     },
   },
 };

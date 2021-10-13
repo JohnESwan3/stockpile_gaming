@@ -1,40 +1,48 @@
 export default {
-  title: 'Author',
   name: 'author',
+  title: 'Author',
   type: 'document',
   fields: [
     {
-      title: 'Name',
       name: 'name',
+      title: 'Name',
       type: 'string',
     },
     {
-      title: 'Slug',
       name: 'slug',
+      title: 'Slug',
       type: 'slug',
       options: {
         source: 'name',
-        maxLength: 200, // will be ignored if slugify is set
+        maxLength: 96,
       },
     },
     {
-      title: 'Bio',
-      name: 'bio',
-      type: 'text',
-    },
-    {
-      title: 'Image',
       name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
+    {
+      name: 'bio',
+      title: 'Bio',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: [],
+        },
+      ],
+    },
   ],
   preview: {
     select: {
       title: 'name',
-      media: 'profileImage',
+      media: 'image',
     },
   },
 };
