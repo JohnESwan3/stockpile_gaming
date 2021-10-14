@@ -28,7 +28,7 @@ export default function Review() {
     <main className="bg-gray-300 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-4xl flex justify-center p-10">All Reviews</h1>
-        <section className="grid grid-cols-1 lg:grid-cols-8 md:grid-cols-4 gap-8">
+        <section className="grid grid-cols-1 lg:grid-cols-6 xl:grid-cols-8 md:grid-cols-4 gap-8">
           {reviewData &&
             reviewData.map((review, index) => (
               <article>

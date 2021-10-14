@@ -147,21 +147,28 @@ export default function SingleReview() {
       .catch(console.error);
   }, [slug]);
 
-  if (!singleReview) return <div>Loading...</div>;
+  if (!singleReview) return <div className="min-h-screen">Loading...</div>;
 
   return (
-    <main className="bg-gray-300">
-      <header className="flex items-center flex-col text-center">
-        <div className="p-4">
-          <h1 className="">{singleReview.title}</h1>
+    <main className="bg-gray-300 min-h-screen">
+      <img
+        src={singleReview.bgImage.asset.url}
+        alt={singleReview.title}
+        className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50"
+      />
+      <br />
+      <header className="flex items-center flex-col text-center relative bg-gray-900 text-gray-100 backdrop-filter bg-opacity-50 backdrop-blur-lg w-full md:w-2/3 mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 rounded-lg">
+        <div className="p-4 text-3xl md:text-5xl lg:text-6xl font-bold leading-loose">
+          <h1>{singleReview.title}</h1>
         </div>
         <div>
-          <div className="md:flex-row md:flex">
-            <h3 className="sm:px-6 md:py-2">
-              Reviewed On: {singleReview.publishedOn}
+          <div className="flex-row flex">
+            <h3 className=" p-2 text-lg">
+              Date:{' '}
+              <span className="font-semibold">{singleReview.publishedOn}</span>
             </h3>
-            <h3 className="sm:px-6 md:py-2">
-              Release Date: {singleReview.releaseDate}
+            <h3 className=" p-2 text-lg">
+              By: <span className="font-semibold">{singleReview.name}</span>
             </h3>
           </div>
         </div>
@@ -169,10 +176,51 @@ export default function SingleReview() {
           <img
             src={singleReview.headerImg.asset.url}
             alt={singleReview.title}
-            className="max-h-full"
+            className="max-h-full shadow-xl mb-6 rounded-lg"
           />
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-1">
+          <p className="p-1 md:p-2 md:shadow md:rounded">
+            Reviewed On: <br />
+            {singleReview.reviewedOn}
+          </p>
+          <p className="p-1 md:p-2 md:shadow md:rounded">
+            Release Date:
+            <br /> {singleReview.releaseDate}
+          </p>
+          <p className="p-1 md:p-2 md:shadow md:rounded">
+            Developer: <br /> {singleReview.developer[0]} <br />
+            {singleReview.developer[1]}
+            <br />
+            {singleReview.developer[2]}
+          </p>
+          <p className="p-1 md:p-2 md:shadow md:rounded">
+            Publisher: <br /> {singleReview.publisher[0]}
+            <br />
+            {singleReview.publisher[1]}
+            <br />
+            {singleReview.publisher[2]}
+          </p>
+          <p className="p-1 md:p-2 md:shadow md:rounded">
+            Engine:
+            <br /> {singleReview.engine}
+          </p>
+        </div>
       </header>
+      <div className="p-10"></div>
+      <article className="flex items-center flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-2/3  mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 rounded-lg">
+        <div>
+          <BlockContent
+            blocks={singleReview.article1}
+            projectId="qc546n1u"
+            dataset="production"
+            className="p-4 md:p-10 md:text-lg"
+          />
+        </div>
+      </article>
+      <br />
+      <br />
+      <br />
     </main>
   );
 }
