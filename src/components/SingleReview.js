@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
-import imageUrlBuilder from '@sanity/image-url';
+// import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-  return builder.image(source);
-}
+// const builder = imageUrlBuilder(sanityClient);
+// function urlFor(source) {
+//   return builder.image(source);
+// }
 
 export default function SingleReview() {
   const [singleReview, setSingleReview] = useState(null);
