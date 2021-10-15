@@ -61,7 +61,7 @@ export default function Review() {
                       <img
                         src={review.coverImage.asset.url}
                         alt={review.coverImage.alt}
-                        className="w-5/12 md:w-1/3 lg:w-32 sticky p-0 m-0 shadow-xl rounded-l-lg"
+                        className="w-5/12 md:w-1/4 lg:w-32 sticky p-0 m-0 shadow-xl rounded-l-lg"
                       />
                       <div className="p-5">
                         <h1 className="font-bold text-xl">{review.title}</h1>
