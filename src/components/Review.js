@@ -33,7 +33,7 @@ export default function Review() {
     <main className="bg-gray-900 min-h-screen text-gray-100 pb-20">
       <section className=" mx-auto">
         <h1 className="text-4xl flex justify-center p-10">All Reviews</h1>
-        <section className="flex flex-col gap-12">
+        <section className="flex flex-col gap-6 md:gap-12">
           {reviewData &&
             reviewData.map((review, index) => (
               <article className="w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto">
@@ -61,7 +61,7 @@ export default function Review() {
                       <img
                         src={review.coverImage.asset.url}
                         alt={review.coverImage.alt}
-                        className="w-1/4 lg:w-32 sticky p-0 m-0 shadow-xl rounded-l-lg"
+                        className="w-5/12 md:w-1/4 lg:w-32 sticky p-0 m-0 shadow-xl rounded-l-lg"
                       />
                       <div className="p-5">
                         <h1 className="font-bold text-xl">{review.title}</h1>
