@@ -56,12 +56,12 @@ export default function Review() {
                       </h3>
                     </div>
                   </div> */}
-                  <div className=" bg-gray-800 border-2 border-gray-800 md:rounded-lg shadow-xl">
+                  <div className=" bg-gray-800 border-1 border-gray-800 md:rounded-lg shadow-xl">
                     <div className="flex flex-row">
                       <img
                         src={review.coverImage.asset.url}
                         alt={review.coverImage.alt}
-                        className="w-1/4 lg:w-32 sticky p-0 m-0 shadow-xl"
+                        className="w-1/4 lg:w-32 sticky p-0 m-0 shadow-xl rounded-l-lg"
                       />
                       <div className="p-5">
                         <h1 className="font-bold text-xl">{review.title}</h1>
