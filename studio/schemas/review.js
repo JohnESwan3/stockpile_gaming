@@ -30,6 +30,9 @@ export default {
       title: 'Description',
       type: 'array',
       of: [{ type: 'block' }],
+      options: {
+        maxLength: 90,
+      },
     },
     {
       name: 'genre',
@@ -172,12 +175,38 @@ export default {
     {
       name: 'platforms',
       title: 'Platforms',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: [
+              { value: 'PC: Steam', title: 'PC: Steam' },
+              { value: 'PC: Epic', title: 'PC: Epic Games Store' },
+              { value: 'PC: GOG', title: 'PC: Other' },
+              { value: 'PS5', title: 'PS5' },
+              { value: 'PS4', title: 'PS4' },
+              { value: 'PS3', title: 'PS3' },
+              { value: 'PSVita', title: 'PSVita' },
+              { value: 'PSP', title: 'PSP' },
+              { value: 'Xbox Series X|S', title: 'Xbox Series X|S' },
+              { value: 'Xbox One', title: 'Xbox One' },
+              { value: 'Nintendo Switch', title: 'Nintendo Switch' },
+              { value: 'Nintendo 3DS', title: 'Nintendo 3DS' },
+            ],
+          },
+        },
+      ],
+    },
+    {
+      name: 'reviewedOn',
+      title: 'Platform Reviewed On',
       type: 'string',
       options: {
         list: [
           { value: 'PC: Steam', title: 'PC: Steam' },
           { value: 'PC: Epic', title: 'PC: Epic Games Store' },
-          { value: 'PC: GOG', title: 'PC: Other' },
+          { value: 'PC: GOG', title: 'PC: GOG' },
           { value: 'PS5', title: 'PS5' },
           { value: 'PS4', title: 'PS4' },
           { value: 'PS3', title: 'PS3' },
@@ -191,24 +220,12 @@ export default {
       },
     },
     {
-      name: 'reviewedOn',
-      title: 'Platform Reviewed On',
-      type: 'string',
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
       options: {
-        list: [
-          { value: 'PC: Steam', title: 'PC: Steam' },
-          { value: 'PC: Epic', title: 'PC: Epic Games Store' },
-          { value: 'PC: GOG', title: 'PC: Other' },
-          { value: 'PS5', title: 'PS5' },
-          { value: 'PS4', title: 'PS4' },
-          { value: 'PS3', title: 'PS3' },
-          { value: 'PSVita', title: 'PSVita' },
-          { value: 'PSP', title: 'PSP' },
-          { value: 'Xbox Series X|S', title: 'Xbox Series X|S' },
-          { value: 'Xbox One', title: 'Xbox One' },
-          { value: 'Nintendo Switch', title: 'Nintendo Switch' },
-          { value: 'Nintendo 3DS', title: 'Nintendo 3DS' },
-        ],
+        layout: 'tags',
       },
     },
     // Review Breakdown
@@ -262,20 +279,10 @@ export default {
       of: [{ type: 'block' }],
     },
     {
-      name: 'graphicsScore',
-      title: 'Graphics Score',
-      type: 'number',
-    },
-    {
       name: 'sound',
       title: 'Sound Review',
       type: 'array',
       of: [{ type: 'block' }],
-    },
-    {
-      name: 'soundScore',
-      title: 'Sound Score',
-      type: 'number',
     },
     {
       name: 'gameplay',
@@ -284,20 +291,10 @@ export default {
       of: [{ type: 'block' }],
     },
     {
-      name: 'gameplayScore',
-      title: 'Gameplay Score',
-      type: 'number',
-    },
-    {
       name: 'story',
       title: 'Story Review',
       type: 'array',
       of: [{ type: 'block' }],
-    },
-    {
-      name: 'storyScore',
-      title: 'Story Score',
-      type: 'number',
     },
     {
       name: 'summary',
