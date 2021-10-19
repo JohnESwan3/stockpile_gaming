@@ -157,7 +157,7 @@ export default function SingleReview() {
         className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50"
       />
       <br />
-      <header className="flex items-center flex-col text-center relative bg-gray-900 text-gray-100 backdrop-filter bg-opacity-50 backdrop-blur-lg w-full md:w-2/3 mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 rounded-lg">
+      <header className="flex items-center flex-col text-center relative bg-gray-900 text-gray-100 backdrop-filter bg-opacity-50 backdrop-blur-lg w-full md:w-5/6 mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 md:rounded-lg">
         <div className="p-4 text-3xl md:text-5xl lg:text-6xl font-bold leading-loose">
           <h1>{singleReview.title}</h1>
         </div>
@@ -176,7 +176,7 @@ export default function SingleReview() {
           <img
             src={singleReview.headerImg.asset.url}
             alt={singleReview.title}
-            className="max-h-full shadow-xl mb-6 rounded-lg"
+            className="max-h-full shadow-xl mb-6 md:rounded-lg"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-1">
@@ -208,16 +208,29 @@ export default function SingleReview() {
         </div>
       </header>
       <div className="p-10"></div>
-      <article className="flex items-center flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-2/3  mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 rounded-lg">
-        <div>
+      <article className="flex items-center md:items-start flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-5/6 mx-auto md:border-2 border-gray-600 md:rounded-lg p-6 md:p-10 shadow-xl">
+        {/* Heading */}
+        <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+          {singleReview.heading}
+        </h1>
+        {/* Article Part 1 */}
+        <p className="md:text-lg">
           <BlockContent
             blocks={singleReview.article1}
             projectId="qc546n1u"
             dataset="production"
-            className="p-4 md:p-10 md:text-lg"
+          />
+        </p>
+      </article>
+      <section>
+        <div>
+          <img
+            src={singleReview.gameLogo.asset.url}
+            alt={singleReview.title}
+            className="max-h-full shadow-xl mb-6 md:rounded-lg"
           />
         </div>
-      </article>
+      </section>
       <br />
       <br />
       <br />
