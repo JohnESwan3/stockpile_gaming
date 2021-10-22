@@ -80,61 +80,7 @@ export default function SingleReview() {
       storyScore,
       summary,
       score,
-      screenshot1{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot2{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot3{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot4{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot5{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot6{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot7{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot8{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot9{
-        asset->{
-          _id,
-          url
-        }
-      },
-      screenshot10{
+      carousel{
         asset->{
           _id,
           url

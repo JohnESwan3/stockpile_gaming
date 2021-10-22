@@ -22,7 +22,8 @@ export default function Review() {
             url,
           },
           alt,
-        }
+        },
+        tags,
       }`
       )
       .then((data) => setReviewData(data))
@@ -32,36 +33,23 @@ export default function Review() {
   return (
     <main className="bg-gray-900 min-h-screen text-gray-100 pb-20">
       <section className=" mx-auto">
-        <h1 className="text-4xl flex justify-center p-10">All Reviews</h1>
-        <section className="flex flex-col gap-6 md:gap-12">
+        <div>
+          <h1 className="text-4xl flex justify-center p-10">Reviews</h1>
+        </div>
+        <div className="flex flex-col gap-6 md:gap-12">
           {reviewData &&
             reviewData.map((review, index) => (
-              <article className="w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto">
+              <section className="w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto">
                 <Link
                   to={'/review/' + review.slug.current}
                   key={review.slug.current}
                 >
-                  {/* <div
-                    className="grid grid-cols-2 h-96 md:h-64 lg:h-54 relative leading-snug mb-4"
-                    key={index}
-                  >
-                    <img
-                      src={review.coverImage.asset.url}
-                      alt={review.coverImage.alt}
-                      className=" h-1/2 relative rounded-lg shadow-xl"
-                    />
-                    <div className="h-1/2 w-full bg-gray-500 flex justify-end items-end pb-4 mx-2 ">
-                      <h3 className="text-md font-bold px-3 py-4 bg-gray-800 text-gray-100 bg-opacity-75 rounded-lg backdrop-filter backdrop-blur-md shadow">
-                        {review.title}
-                      </h3>
-                    </div>
-                  </div> */}
-                  <div className=" bg-gray-800 border-1 border-gray-800 md:rounded-lg shadow-xl">
+                  <div className=" bg-gray-800 border-1 border-gray-800 rounded-none md:rounded-lg shadow-xl">
                     <div className="flex flex-row">
                       <img
                         src={review.coverImage.asset.url}
                         alt={review.coverImage.alt}
-                        className="w-5/12 md:w-1/4 lg:w-32 sticky p-0 m-0 shadow-xl rounded-l-lg"
+                        className="w-5/12 md:w-1/4 lg:w-32 p-0 m-0 shadow-xl rounded-none md:rounded-l-lg"
                       />
                       <div className="p-5">
                         <h1 className="font-bold text-xl">{review.title}</h1>
@@ -79,6 +67,7 @@ export default function Review() {
                               blocks={review.description}
                               projectId="qc546n1u"
                               dataset="production"
+                              className="object-cover"
                               // className="p-4 md:p-10 md:text-lg"
                             />
                           </p>
@@ -87,9 +76,9 @@ export default function Review() {
                     </div>
                   </div>
                 </Link>
-              </article>
+              </section>
             ))}
-        </section>
+        </div>
       </section>
     </main>
   );

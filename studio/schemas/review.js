@@ -309,84 +309,10 @@ export default {
     },
     // Screenshots
     {
-      name: 'screenshot1',
-      title: 'Screenshot 1',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot2',
-      title: 'Screenshot 2',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot3',
-      title: 'Screenshot 3',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot4',
-      title: 'Screenshot 4',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot5',
-      title: 'Screenshot 5',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot6',
-      title: 'Screenshot 6',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot7',
-      title: 'Screenshot 7',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot8',
-      title: 'Screenshot 8',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot9',
-      title: 'Screenshot 9',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'screenshot10',
-      title: 'Screenshot 10',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'carousel',
+      title: 'Carousel',
+      type: 'array',
+      of: [{ type: 'image' }],
     },
   ],
   preview: {
