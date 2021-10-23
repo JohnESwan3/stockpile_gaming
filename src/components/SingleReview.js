@@ -93,10 +93,15 @@ export default function SingleReview() {
       .catch(console.error);
   }, [slug]);
 
-  if (!singleReview) return <div className="min-h-screen">Loading...</div>;
+  if (!singleReview)
+    return (
+      <div className="min-h-screen bg-gray-800 text-gray-100 text-4xl">
+        Loading...
+      </div>
+    );
 
   return (
-    <main className="bg-gray-300 min-h-screen">
+    <main className="bg-gray-800 min-h-screen">
       <img
         src={singleReview.bgImage.asset.url}
         alt={singleReview.title}

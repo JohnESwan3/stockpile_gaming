@@ -44,7 +44,7 @@ export default function Review() {
                   to={'/review/' + review.slug.current}
                   key={review.slug.current}
                 >
-                  <div className=" bg-gray-800 border-1 border-gray-800 rounded-none md:rounded-lg shadow-xl">
+                  <div className=" bg-gray-800 border-1 border-gray-800 rounded-none md:rounded-lg shadow-xl hover:bg-gray-700">
                     <div className="flex flex-row">
                       <img
                         src={review.coverImage.asset.url}

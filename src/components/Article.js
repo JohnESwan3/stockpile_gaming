@@ -51,7 +51,7 @@ export default function Article() {
                   to={'/article/' + article.slug.current}
                   key={article.slug.current}
                 >
-                  <div className="bg-gray-800 border-1 border-gray-800 md:rounded-lg shadow-xl">
+                  <div className="bg-gray-800 border-1 border-gray-800 md:rounded-lg shadow-xl hover:bg-gray-700">
                     <div className="flex">
                       <img
                         src={article.mainImage.asset.url}
@@ -70,7 +70,8 @@ export default function Article() {
                           />
                         </p>
                         <p className="text-sm text-gray-300">
-                          By:&nbsp;{article.name}&nbsp; -{article.publishDate}
+                          By:&nbsp;{article.name}&nbsp; | &nbsp;
+                          {article.publishDate}
                         </p>
                       </div>
                     </div>
