@@ -1,6 +1,6 @@
 {
   "short_name": "Stockpile",
-  "name": "Stockpile Games",
+  "name": "Stockpile Gaming",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#111827",
+  "background_color": "#111827"
 }
