@@ -1,4 +1,5 @@
 import image from '../img/bg-1.jpg';
+import logo from '../img/SPLogo.png';
 
 export default function Home() {
   return (
@@ -8,16 +9,11 @@ export default function Home() {
         alt="Background"
         className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50 z-0"
       />
-      <section className="relative flex-column justify-center text-center pt-12 lg:pt-64 px-8 ">
-        <h1 className="text-gray-100 text-3xl font-semibold leading-none lg:leading-snug">
-          Under Development
-        </h1>
-        <p className="text-gray-100 text-xl leading-none lg:leading-snug">
-          Coming Soon
-        </p>
-        <h2 className="text-green-400 text-3xl font-bold leading-none lg:leading-snug">
+      <section className="relative flex-column justify-center text-center pt-12 px-8 ">
+        <img src={logo} alt="" className="w-1/2 md:w-1/3 m-auto" />
+        <h1 className="text-green-400 text-3xl font-bold leading-none lg:leading-snug">
           Stockpile Gaming
-        </h2>
+        </h1>
       </section>
     </main>
   );
