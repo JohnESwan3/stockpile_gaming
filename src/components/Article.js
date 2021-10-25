@@ -70,7 +70,7 @@ export default function Article() {
                           />
                         </p>
                         <p className="text-sm text-gray-300">
-                          By:&nbsp;{article.name}&nbsp; | &nbsp;
+                          {article.name}&nbsp; | &nbsp;
                           {article.publishDate}
                         </p>
                       </div>

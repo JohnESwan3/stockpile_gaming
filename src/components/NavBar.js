@@ -52,7 +52,7 @@ export default function NavBar() {
             </div>
           </div>
           {/* Login */}
-          <div className="hidden md:flex items-center space-x-3">
+          {/* <div className="hidden md:flex items-center space-x-3">
             <NavLink
               to="/login"
               className="py-2 px-2 font-medium text-gray-300 rounded hover:bg-green-600 hover:text-white transition duration-300"
@@ -67,7 +67,7 @@ export default function NavBar() {
             >
               Sign Up
             </NavLink>
-          </div>
+          </div> */}
           {/* Mobile Menue Button */}
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button">
