@@ -56,7 +56,7 @@ export default function SingleArticle() {
 
   return (
     <main className="bg-gray-900 min-h-screen  text-gray-100">
-      <div className="w-full md:w-11/12 xl:w-5/6 m-auto xl:border-l-2 xl:border-gray-800 xl:border-r-2 p-4">
+      <div className="w-full md:w-11/12 lg:10/12 xl:w-4/5 m-auto shadow-none xl:shadow-2xl p-4">
         <header className="">
           <h1 className="text-4xl">{singleArticle.title}</h1>
           <p>by:&nbsp;{singleArticle.name}</p>
