@@ -1,5 +1,5 @@
 import { SocialIcon } from 'react-social-icons';
-import image from '../img/bg-1.jpg';
+import image from '../img/bg-1.webp';
 import odysee from '../img/odyseeLogo.svg';
 
 export default function About() {

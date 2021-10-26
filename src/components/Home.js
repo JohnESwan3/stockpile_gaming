@@ -1,11 +1,12 @@
-import image from '../img/bg-1.jpg';
+// import bg from '../img/bg-1.jpg';
+import bgwebp from '../img/bg-1.webp';
 import logo from '../img/SPLogo.svg';
 
 export default function Home() {
   return (
     <main className="min-h-screena">
       <img
-        src={image}
+        src={bgwebp}
         alt="Background"
         className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50 z-0"
       />
