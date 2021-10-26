@@ -1,5 +1,5 @@
 import image from '../img/bg-1.jpg';
-import logo from '../img/SPLogo.png';
+import logo from '../img/SPLogo.svg';
 
 export default function Home() {
   return (
