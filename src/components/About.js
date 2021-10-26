@@ -1,6 +1,6 @@
 import { SocialIcon } from 'react-social-icons';
 import image from '../img/bg-1.jpg';
-import odysee from '../img/odysseLogo.svg';
+import odysee from '../img/odyseeLogo.svg';
 
 export default function About() {
   return (
