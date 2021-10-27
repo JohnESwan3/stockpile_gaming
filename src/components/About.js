@@ -46,7 +46,7 @@ export default function About() {
                   style={{ height: 40, width: 40 }}
                 />
                 <SocialIcon
-                  url="https://www.instagram.com/Stockpile__Gaming/"
+                  url="https://www.instagram.com/stockpilegaming/"
                   target="_blank"
                   fgColor="#fff"
                   style={{ height: 40, width: 40 }}
