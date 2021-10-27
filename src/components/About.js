@@ -32,18 +32,24 @@ export default function About() {
           <aside className="bg-green-900 bg-opacity-25 shadow-xl rounded-xl w-auto md:w-1/5 text-center justify-center flex p-4">
             <div className=" m-auto">
               <h1 className="font-semibold text-lg">Social Media</h1>
-              <div className="flex flex-row gap-2 mt-4">
+              <div className="flex flex-row flex-wrap gap-2 mt-4">
                 <SocialIcon
                   url="https://twitter.com/StockpileGamer"
                   target="_blank"
                   fgColor="#fff"
-                  style={{ height: 35, width: 35 }}
+                  style={{ height: 40, width: 40 }}
                 />
                 <SocialIcon
                   url="https://www.youtube.com/channel/UCkX43FLaQZYBCjRWX-SdHKg"
                   target="_blank"
                   fgColor="#fff"
-                  style={{ height: 35, width: 35 }}
+                  style={{ height: 40, width: 40 }}
+                />
+                <SocialIcon
+                  url="https://www.instagram.com/Stockpile__Gaming/"
+                  target="_blank"
+                  fgColor="#fff"
+                  style={{ height: 40, width: 40 }}
                 />
 
                 <a
@@ -54,7 +60,7 @@ export default function About() {
                   <img
                     src={odysee}
                     alt="Odysee"
-                    style={{ height: 35, width: 35 }}
+                    style={{ height: 40, width: 40 }}
                   />
                 </a>
               </div>
