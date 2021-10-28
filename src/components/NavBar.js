@@ -86,8 +86,8 @@ export default function NavBar() {
             </button>
           </div>
           {/* Mobile Menu */}
-          <div className="hidden mobile-menu">
-            <ul className="">
+          <div className="hidden mobile-menu ">
+            <ul className=" flex flex-row mt-1 gap-1">
               <li>
                 <NavLink
                   to="/"
@@ -132,9 +132,3 @@ export default function NavBar() {
     </nav>
   );
 }
-// const btn = document.querySelector('button.mobile-menu-button');
-// const menu = document.querySelector('.mobile-menu');
-
-// btn.addEventListener('click', () => {
-//   menu.classList.toggle('hidden');
-// });

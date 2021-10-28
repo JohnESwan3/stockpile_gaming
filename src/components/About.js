@@ -1,5 +1,6 @@
 import { SocialIcon } from 'react-social-icons';
 import image from '../img/bg-1.svg';
+import logo from '../img/SPLogo.svg';
 import odysee from '../img/odyseeLogo.svg';
 
 export default function About() {
@@ -8,29 +9,38 @@ export default function About() {
       <img
         src={image}
         alt="Background"
-        className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50 blur-sm z-0"
+        className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50  z-0"
       />
-      <div className="relative bg-gray-900 w-full md:w-11/12 lg:10/12 xl:w-4/5 m-auto shadow-none xl:shadow-xl p-4  backdrop-filter bg-opacity-70 backdrop-blur-lg">
-        <div className="mt-10 flex justify-center text-3xl text-green-500">
-          <h1>Stockpile Gaming</h1>
+      <br />
+      <br />
+      <div className="relative bg-gray-900 w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto shadow-none xl:shadow-xl p-4 md:p-6  backdrop-filter bg-opacity-70 backdrop-blur-lg rounded-none md:rounded-xl">
+        <div className="flex justify-center">
+          <img src={logo} alt="Stockpile Gaming" className="w-full md:w-1/3" />
         </div>
         <br />
+
         <div className="flex flex-col md:flex-row">
           <article className="w-auto md:w-4/5 p-4">
             <div>
-              <h1 className="text-center text-xl p-4">
-                About Stockpile Gaming
-              </h1>
+              <h1 className="text-center text-xl p-4">Stockpile Gaming</h1>
               <p>
                 I am John Swan, the creator of Stockpile Gaming. I created this
-                website to write reviews of games that I am playing, news and
-                information that I find interresting, and anything else that
-                comes to mind.
+                website to write reviews of both old and new games, news and
+                information that I find interesting, and anything else that
+                comes that I feel would be a good fit for the website.
               </p>
             </div>
           </article>
           <aside className="bg-green-900 bg-opacity-25 shadow-xl rounded-xl w-auto md:w-1/5 text-center justify-center flex p-4">
             <div className=" m-auto">
+              <button className="p-3 mb-4 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600">
+                <a href="mailto:stockpilegaming@protonmail.com">
+                  Business Email
+                </a>
+              </button>
+              <br />
+              <hr />
+              <br />
               <h1 className="font-semibold text-lg">Social Media</h1>
               <div className="flex flex-row flex-wrap gap-2 mt-4">
                 <SocialIcon
@@ -67,6 +77,10 @@ export default function About() {
             </div>
           </aside>
         </div>
+        <article className="w-full md:w-4/5 p-4">
+          <h1 className="font-semibold text-lg">Hello</h1>
+          <p></p>
+        </article>
       </div>
     </main>
   );
