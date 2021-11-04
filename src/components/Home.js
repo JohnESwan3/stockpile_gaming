@@ -4,7 +4,7 @@ import logo from '../img/SPLogo.svg';
 
 export default function Home() {
   return (
-    <main className="min-h-screena">
+    <main className="min-h-screen">
       <img
         src={bgwebp}
         alt="Background"
