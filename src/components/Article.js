@@ -57,7 +57,7 @@ export default function Article() {
                       <img
                         src={article.bannerImage.asset.url}
                         alt={article.bannerImage.alt}
-                        className="h-40 w-36 shadow-xl rounded-none md:rounded-l-lg object-cover"
+                        className="h-40 w-24 shadow-xl rounded-none md:rounded-l-lg object-cover"
                       />
 
                       <div className="p-4 flex flex-col gap-1 text-sm">
