@@ -100,20 +100,20 @@ export default function NavBar() {
               </li>
               <li>
                 <NavLink
-                  to="/article"
-                  className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
-                  activeClassName="bg-green-600 text-white"
-                >
-                  Articles
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
                   to="/review"
                   className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
                   activeClassName="bg-green-600 text-white"
                 >
                   Review
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/article"
+                  className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
+                  activeClassName="bg-green-600 text-white"
+                >
+                  Articles
                 </NavLink>
               </li>
               <li>

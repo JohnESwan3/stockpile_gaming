@@ -60,7 +60,7 @@ export default function Article() {
                         className="h-36 shadow-xl rounded-none md:rounded-l-lg object-cover"
                       />
 
-                      <div className="p-4 flex flex-col gap-1">
+                      <div className="p-4 flex flex-col gap-1 text-sm">
                         <ul className="flex flex-row gap-2">
                           <li className="bg-indigo-600 p-1 rounded-lg text-xs">
                             {article.type}
@@ -72,13 +72,11 @@ export default function Article() {
                         <h1 className="text-md md:text-lg font-semibold">
                           {article.title}
                         </h1>
-                        <p className="text-sm md:text-md">
-                          <BlockContent
-                            blocks={article.description}
-                            projectId="qc546n1u"
-                            dataset="production"
-                          />
-                        </p>
+                        <BlockContent
+                          blocks={article.description}
+                          projectId="qc546n1u"
+                          dataset="production"
+                        />
                         <p className="text-sm text-gray-300">
                           {article.name}&nbsp; | &nbsp;
                           {article.publishDate}

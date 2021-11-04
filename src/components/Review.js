@@ -65,16 +65,14 @@ export default function Review() {
                         <h1 className="font-bold text-lg m-1">
                           {review.title}
                         </h1>
-                        <div>
-                          <p className="m-1 text-md">
-                            <BlockContent
-                              blocks={review.description}
-                              projectId="qc546n1u"
-                              dataset="production"
-                              className="object-cover"
-                              // className="p-4 md:p-10 md:text-lg"
-                            />
-                          </p>
+                        <div className="m-1 text-md">
+                          <BlockContent
+                            blocks={review.description}
+                            projectId="qc546n1u"
+                            dataset="production"
+                            className="object-cover"
+                            // className="p-4 md:p-10 md:text-lg"
+                          />
                         </div>
                       </div>
                     </div>
