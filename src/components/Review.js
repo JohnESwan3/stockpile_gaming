@@ -15,6 +15,7 @@ export default function Review() {
         description,
         genre,
         subGenre,
+        publishedOn,
         summary,
         coverImage {
           asset->{
@@ -44,25 +45,28 @@ export default function Review() {
                   to={'/review/' + review.slug.current}
                   key={review.slug.current}
                 >
-                  <div className=" bg-gray-800 border-1 border-gray-800 rounded-none md:rounded-lg shadow-xl hover:bg-gray-700">
+                  <div className=" bg-gray-800 h-36 border-1 border-gray-800 rounded-none md:rounded-lg shadow-xl hover:bg-gray-700">
                     <div className="flex flex-row">
                       <img
                         src={review.coverImage.asset.url}
                         alt={review.coverImage.alt}
-                        className="w-5/12 md:w-1/6 lg:w-32 p-0 m-0 shadow-xl rounded-none md:rounded-l-lg"
+                        className="h-36 object-cover p-0 m-0 shadow-xl rounded-none md:rounded-l-lg"
                       />
                       <div className="p-5">
-                        <h1 className="font-bold text-xl">{review.title}</h1>
-                        <ul className=" hidden md:visible md:flex flex-row gap-2 pt-1">
-                          <li className="bg-red-600 px-1.5 py-1 rounded-lg text-md">
+                        <ul className=" hidden md:visible md:flex flex-row gap-2">
+                          <li className="bg-red-600 p-1 rounded-lg text-xs">
                             {review.genre}
                           </li>
-                          <li className="bg-blue-600 px-1.5 py-1 rounded-lg text-md">
+                          <li className="bg-blue-600 p-1 rounded-lg text-xs">
                             {review.subGenre}
                           </li>
+                          <li>{review.publishedOn}</li>
                         </ul>
+                        <h1 className="font-bold text-lg m-1">
+                          {review.title}
+                        </h1>
                         <div>
-                          <p className="p-1 md:p-5 md:text-lg">
+                          <p className="m-1 text-md">
                             <BlockContent
                               blocks={review.description}
                               projectId="qc546n1u"

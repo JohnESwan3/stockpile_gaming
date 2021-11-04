@@ -16,15 +16,16 @@ export default function Article() {
         "authorImage":author->image,
         publishDate,
         description,
+        "type": category->title,
         tags,
-        mainImage{
+        bannerImage{
           asset->{
             _id,
             url,
           },
           alt,
         },
-        secondaryImage{
+        imagemage{
           asset->{
             _id,
             url,
@@ -51,14 +52,23 @@ export default function Article() {
                   to={'/article/' + article.slug.current}
                   key={article.slug.current}
                 >
-                  <div className="bg-gray-800 border-1 border-gray-800 md:rounded-lg shadow-xl hover:bg-gray-700">
-                    <div className="flex">
+                  <div className="bg-gray-800 h-36 border-1 border-gray-800 md:rounded-lg shadow-xl hover:bg-gray-700">
+                    <div className="flex flex-row">
                       <img
-                        src={article.mainImage.asset.url}
-                        alt={article.mainImage.alt}
-                        className="w-1/3 md:w-1/5 shadow-xl rounded-none md:rounded-l-lg object-cover"
+                        src={article.bannerImage.asset.url}
+                        alt={article.bannerImage.alt}
+                        className="h-36 shadow-xl rounded-none md:rounded-l-lg object-cover"
                       />
-                      <div className="p-4 flex flex-col gap-2 md:gap-4">
+
+                      <div className="p-4 flex flex-col gap-1">
+                        <ul className="flex flex-row gap-2">
+                          <li className="bg-indigo-600 p-1 rounded-lg text-xs">
+                            {article.type}
+                          </li>
+                          <li className="bg-green-900 p-1 rounded-lg text-xs">
+                            {article.tags[0]}
+                          </li>
+                        </ul>
                         <h1 className="text-md md:text-lg font-semibold">
                           {article.title}
                         </h1>

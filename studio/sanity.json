@@ -1,18 +1,17 @@
 {
   "root": true,
+  "project": {
+    "name": "Stockpile Gaming"
+  },
   "api": {
     "projectId": "qc546n1u",
     "dataset": "production"
-  },
-  "project": {
-    "name": "Stockpile Gaming"
   },
   "plugins": [
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "@sanity/vision"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {

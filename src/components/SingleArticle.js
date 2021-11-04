@@ -16,18 +16,19 @@ export default function SingleArticle() {
         slug,
         "name": author->name,
         "authorImage": author->image,
+        "type": category->title,
         publishDate,
         tags,
         heading,
         article,
-        mainImage{
+        bannerImage{
           asset->{
             _id,
             url
           },
           alt,
         },
-        secondaryImage{
+        image{
           asset->{
             _id,
             url
@@ -55,44 +56,51 @@ export default function SingleArticle() {
     );
 
   return (
-    <main className="bg-gray-900 min-h-screen  text-gray-100">
-      <div className="w-full md:w-11/12 lg:10/12 xl:w-4/5 m-auto shadow-none xl:shadow-2xl p-4">
-        <header className="">
-          <h1 className="text-4xl">{singleArticle.title}</h1>
-          <p>by:&nbsp;{singleArticle.name}</p>
-          <p>{singleArticle.publishDate}</p>
-        </header>
-        <section>
-          <img
-            src={singleArticle.mainImage.asset.url}
-            alt={singleArticle.mainImage.url}
-            className="w-5/6 object-cover m-auto rounded-none md:rounded-lg"
-          />
-          <div className="flex flex-col md:flex-row gap-2 md:gap-8">
-            <p>By:&nbsp;{singleArticle.name}</p>
-            <p>Posted:&nbsp;{singleArticle.publishDate}</p>
+    <main className="bg-gray-900 min-h-screen text-gray-100">
+      <header className="w-full 4xl:w-5/6 m-auto">
+        <section className="relative py-36 px-4">
+          <div className="absolute inset-0 h-auto">
+            <img
+              src={singleArticle.bannerImage.asset.url}
+              alt=""
+              className="h-full w-full object-cover"
+            />
           </div>
         </section>
-        <article className="block float-left">
-          <h1>{singleArticle.heading}</h1>
-          <p>
-            <BlockContent
-              blocks={singleArticle.article}
-              projectId="qc546n1u"
-              dataset="production"
-            />
-          </p>
-        </article>
-        <aside className="block float-right">
-          <h1>Test</h1>
-        </aside>
-        <section>
-          <img
-            src={singleArticle.secondaryImage.asset.url}
-            alt={singleArticle.secondaryImage.alt}
-          />
+        <section className=" text-center md:text-left bg-gray-800 py-4 shadow-xl">
+          <div className="my-2 mx-4">
+            <p className="text-xs">
+              <span className="bg-indigo-600 p-1 rounded-lg">
+                {singleArticle.type}
+              </span>
+              &nbsp; - &nbsp;
+              <span className="bg-green-600 p-1 rounded-lg">
+                {singleArticle.tags[0]}
+              </span>
+            </p>
+          </div>
+          <div className="my-4 mx-6">
+            <h1 className="text-4xl md:text-6xl my-2">{singleArticle.title}</h1>
+            <p>
+              {singleArticle.name}&nbsp; | &nbsp;{singleArticle.publishDate}
+            </p>
+          </div>
         </section>
-      </div>
+      </header>
+      <article className="m-10">
+        <p>
+          <BlockContent
+            blocks={singleArticle.article}
+            projectId="qc546n1u"
+            dataset="production"
+          />
+        </p>
+        <img
+          src={singleArticle.bannerImage.asset.url}
+          alt=""
+          className="w-96 "
+        />
+      </article>
     </main>
   );
 }

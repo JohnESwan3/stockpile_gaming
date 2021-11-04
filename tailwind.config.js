@@ -12,7 +12,11 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '4xl': '2160px',
+      },
+    },
   },
   variants: {
     extend: {},

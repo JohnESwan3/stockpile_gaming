@@ -24,6 +24,12 @@ export default {
       to: { type: 'author' },
     },
     {
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: { type: 'category' },
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',
@@ -33,16 +39,16 @@ export default {
       },
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'bannerImage',
+      title: 'Banner image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'secondaryImage',
-      title: 'Secondary Image',
+      name: 'image',
+      title: 'Article Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -73,6 +79,12 @@ export default {
     {
       name: 'article',
       title: 'Article',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+    {
+      name: 'article2',
+      title: 'Article Part 2',
       type: 'array',
       of: [{ type: 'block' }],
     },
