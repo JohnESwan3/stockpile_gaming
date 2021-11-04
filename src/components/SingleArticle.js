@@ -20,8 +20,13 @@ export default function SingleArticle() {
         publishDate,
         tags,
         heading,
+        heading2,
+        heading3,
+        heading4,
         article,
         article2,
+        article3,
+        article4,
         bannerImage{
           asset->{
             _id,
@@ -92,6 +97,7 @@ export default function SingleArticle() {
           </section>
         </header>
         <article>
+          <h1>{singleArticle.heading}</h1>
           <BlockContent
             blocks={singleArticle.article}
             projectId="qc546n1u"
@@ -108,8 +114,25 @@ export default function SingleArticle() {
             />
           </div>
           <article className="p-6">
+            <h1>{singleArticle.heading2}</h1>
             <BlockContent
               blocks={singleArticle.article2}
+              projectId="qc546n1u"
+              dataset="production"
+            />
+          </article>
+          <article className="p-6">
+            <h1>{singleArticle.heading3}</h1>
+            <BlockContent
+              blocks={singleArticle.article3}
+              projectId="qc546n1u"
+              dataset="production"
+            />
+          </article>
+          <article className="p-6">
+            <h1>{singleArticle.heading4}</h1>
+            <BlockContent
+              blocks={singleArticle.article4}
               projectId="qc546n1u"
               dataset="production"
             />

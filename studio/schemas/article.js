@@ -83,8 +83,35 @@ export default {
       of: [{ type: 'block' }],
     },
     {
+      name: 'heading2',
+      title: 'Heading 2',
+      type: 'string',
+    },
+    {
       name: 'article2',
       title: 'Article Part 2',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+    {
+      name: 'heading3',
+      title: 'Heading 3',
+      type: 'string',
+    },
+    {
+      name: 'article3',
+      title: 'Article Part 3',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+    {
+      name: 'heading4',
+      title: 'Heading 4',
+      type: 'string',
+    },
+    {
+      name: 'article4',
+      title: 'Article Part 4',
       type: 'array',
       of: [{ type: 'block' }],
     },
@@ -100,7 +127,7 @@ export default {
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'bannerImage',
       date: 'publishedAt',
     },
     prepare(selection) {

@@ -52,12 +52,12 @@ export default function Article() {
                   to={'/article/' + article.slug.current}
                   key={article.slug.current}
                 >
-                  <div className="bg-gray-800 h-36 border-1 border-gray-800 md:rounded-lg shadow-xl hover:bg-gray-700">
+                  <div className="bg-gray-800 h-40 border-1 border-gray-800 md:rounded-lg shadow-xl hover:bg-gray-700">
                     <div className="flex flex-row">
                       <img
                         src={article.bannerImage.asset.url}
                         alt={article.bannerImage.alt}
-                        className="h-36 shadow-xl rounded-none md:rounded-l-lg object-cover"
+                        className="h-40 w-36 shadow-xl rounded-none md:rounded-l-lg object-cover"
                       />
 
                       <div className="p-4 flex flex-col gap-1 text-sm">
@@ -69,7 +69,7 @@ export default function Article() {
                             {article.tags[0]}
                           </li>
                         </ul>
-                        <h1 className="text-md md:text-lg font-semibold">
+                        <h1 className="text-lg md:text-lg font-semibold">
                           {article.title}
                         </h1>
                         <BlockContent
