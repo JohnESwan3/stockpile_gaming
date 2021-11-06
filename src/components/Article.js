@@ -25,7 +25,7 @@ export default function Article() {
           },
           alt,
         },
-        imagemage{
+        mainImage{
           asset->{
             _id,
             url,

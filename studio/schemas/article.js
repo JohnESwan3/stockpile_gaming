@@ -72,48 +72,54 @@ export default {
       },
     },
     {
-      name: 'heading',
-      title: 'Heading',
-      type: 'string',
-    },
-    {
       name: 'article',
       title: 'Article',
       type: 'array',
-      of: [{ type: 'block' }],
-    },
-    {
-      name: 'heading2',
-      title: 'Heading 2',
-      type: 'string',
-    },
-    {
-      name: 'article2',
-      title: 'Article Part 2',
-      type: 'array',
-      of: [{ type: 'block' }],
-    },
-    {
-      name: 'heading3',
-      title: 'Heading 3',
-      type: 'string',
-    },
-    {
-      name: 'article3',
-      title: 'Article Part 3',
-      type: 'array',
-      of: [{ type: 'block' }],
-    },
-    {
-      name: 'heading4',
-      title: 'Heading 4',
-      type: 'string',
-    },
-    {
-      name: 'article4',
-      title: 'Article Part 4',
-      type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block',
+          title: 'Block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H1', value: 'h1' },
+            { title: 'H2', value: 'h2' },
+            { title: 'H3', value: 'h3' },
+            { title: 'H4', value: 'h4' },
+            { title: 'Quote', value: 'blockquote' },
+          ],
+          lists: [
+            { title: 'Bullet', value: 'bullet' },
+            { title: 'Number', value: 'number' },
+          ],
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Code', value: 'code' },
+            ],
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'URL',
+                fields: [
+                  {
+                    title: 'URL',
+                    name: 'href',
+                    type: 'url',
+                  },
+                ],
+              },
+            ],
+          },
+          of: [{ type: 'author' }],
+        },
+        {
+          type: 'image',
+          title: 'Main Image',
+          options: { hotspot: true },
+        },
+      ],
     },
     {
       name: 'carousel',

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
+// import PortableText from 'react-portable-text';
 
 export default function SingleArticle() {
   const [singleArticle, setSingleArticle] = useState(null);
@@ -19,14 +20,7 @@ export default function SingleArticle() {
         "type": category->title,
         publishDate,
         tags,
-        heading,
-        heading2,
-        heading3,
-        heading4,
-        article,
-        article2,
-        article3,
-        article4,
+       article,
         bannerImage{
           asset->{
             _id,
@@ -75,7 +69,7 @@ export default function SingleArticle() {
             </div>
           </section>
           <section className=" text-center md:text-left bg-gray-800 py-4 shadow-xl">
-            <div className="my-2 mx-4">
+            <div className="py-2 px-4">
               <p className="text-xs">
                 <span className="bg-indigo-600 p-1 rounded-lg">
                   {singleArticle.type}
@@ -86,7 +80,7 @@ export default function SingleArticle() {
                 </span>
               </p>
             </div>
-            <div className="my-4 mx-6">
+            <div className="py-4 px-6">
               <h1 className="text-4xl md:text-6xl my-2">
                 {singleArticle.title}
               </h1>
@@ -97,7 +91,6 @@ export default function SingleArticle() {
           </section>
         </header>
         <article>
-          <h1>{singleArticle.heading}</h1>
           <BlockContent
             blocks={singleArticle.article}
             projectId="qc546n1u"
@@ -106,37 +99,13 @@ export default function SingleArticle() {
           />
         </article>
         <section>
-          <div className="float-none md:float-right flex justify-center ">
+          <div className="flex justify-center ">
             <img
               src={singleArticle.bannerImage.asset.url}
-              alt=""
-              className="w-60 md:w-80 rounded my-8 mx-4"
+              alt="banner image"
+              className="w-11/12 rounded my-8 mx-4"
             />
           </div>
-          <article className="p-6">
-            <h1>{singleArticle.heading2}</h1>
-            <BlockContent
-              blocks={singleArticle.article2}
-              projectId="qc546n1u"
-              dataset="production"
-            />
-          </article>
-          <article className="p-6">
-            <h1>{singleArticle.heading3}</h1>
-            <BlockContent
-              blocks={singleArticle.article3}
-              projectId="qc546n1u"
-              dataset="production"
-            />
-          </article>
-          <article className="p-6">
-            <h1>{singleArticle.heading4}</h1>
-            <BlockContent
-              blocks={singleArticle.article4}
-              projectId="qc546n1u"
-              dataset="production"
-            />
-          </article>
         </section>
       </div>
     </main>
