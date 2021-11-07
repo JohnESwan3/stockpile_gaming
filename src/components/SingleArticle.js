@@ -95,10 +95,10 @@ export default function SingleArticle() {
             blocks={singleArticle.article}
             projectId="qc546n1u"
             dataset="production"
-            className="p-6"
+            className="p-6 m-auto w-auto md:w-10/12 shadow  text-lg tracking-wide leading-relaxed"
           />
         </article>
-        <section>
+        {/* <section>
           <div className="flex justify-center ">
             <img
               src={singleArticle.bannerImage.asset.url}
@@ -106,7 +106,7 @@ export default function SingleArticle() {
               className="w-11/12 rounded my-8 mx-4"
             />
           </div>
-        </section>
+        </section> */}
       </div>
     </main>
   );
