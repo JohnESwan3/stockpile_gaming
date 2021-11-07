@@ -96,6 +96,13 @@ export default function About() {
             reviewing them).
             <br />
             <br />
+            Articles on Stockpile Gaming may contain affiliate links. These
+            links give me a commision for each purchase made with them. I will
+            not ever post an affiliate link unless it is made very clear.
+            Affiliate links allow Stockpile Gaming to make money, so thank you
+            for using them if you choose to do so!
+            <br />
+            <br />
             Thank-you for stopping by!
             <br />
             <br />
