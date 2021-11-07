@@ -47,7 +47,7 @@ export default function Article() {
         <div className="flex flex-col gap-4 md:gap-8">
           {articleData &&
             articleData.map((article, index) => (
-              <section className="w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto">
+              <section className="w-full md:w-11/12 lg:max-w-7xl m-auto">
                 <Link
                   to={'/article/' + article.slug.current}
                   key={article.slug.current}

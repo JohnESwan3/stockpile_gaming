@@ -605,6 +605,25 @@ export default {
       ],
     },
     {
+      name: 'rating',
+      title: 'Rating',
+      type: 'string',
+      options: {
+        list: [
+          { value: 'Excellent', title: 'Excellent' },
+          { value: 'Above Average', title: 'Above Average' },
+          { value: 'Average', title: 'Average' },
+          { value: 'Below Average', title: 'Below Average' },
+          { value: 'Stay Away', title: 'Stay Away' },
+        ],
+      },
+    },
+    {
+      name: 'sumHeading',
+      title: 'Summary Heading',
+      type: 'string',
+    },
+    {
       name: 'summary',
       title: 'Summary',
       type: 'array',
@@ -654,11 +673,7 @@ export default {
         },
       ],
     },
-    {
-      name: 'score',
-      title: 'Score',
-      type: 'number',
-    },
+
     // Screenshots
     {
       name: 'carousel',

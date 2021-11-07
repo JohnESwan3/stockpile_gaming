@@ -40,7 +40,7 @@ export default function Review() {
         <div className="flex flex-col gap-6 md:gap-12">
           {reviewData &&
             reviewData.map((review, index) => (
-              <section className="w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto">
+              <section className="w-full md:w-11/12 lg:max-w-7xl m-auto">
                 <Link
                   to={'/review/' + review.slug.current}
                   key={review.slug.current}

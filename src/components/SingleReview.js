@@ -71,15 +71,12 @@ export default function SingleReview() {
       article2,
       article3,
       graphics,
-      graphicsScore,
       sound,
-      soundScore,
       gameplay,
-      gameplayScore,
       story,
-      storyScore,
+      rating,
+      sumHeading,
       summary,
-      score,
       carousel{
         asset->{
           _id,
@@ -107,8 +104,8 @@ export default function SingleReview() {
         alt={singleReview.title}
         className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50"
       />
-      <br />
-      <header className="flex items-center flex-col text-center relative bg-gray-900 text-gray-100 backdrop-filter bg-opacity-50 backdrop-blur-lg w-full md:w-5/6 mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 md:rounded-lg">
+      <div className="p-10"></div>
+      <header className="flex items-center flex-col text-center relative bg-gray-900 text-gray-100 backdrop-filter bg-opacity-50 backdrop-blur-lg w-full md:w-11/12 xl:max-w-7xl mx-auto border-l-2 border-t-2 border-r-2 border-b-4 border-gray-600 md:rounded-lg">
         <div className="p-4 text-3xl md:text-5xl lg:text-6xl font-bold leading-loose">
           <h1>{singleReview.title}</h1>
         </div>
@@ -127,64 +124,159 @@ export default function SingleReview() {
           <img
             src={singleReview.headerImg.asset.url}
             alt={singleReview.title}
-            className="max-h-full shadow-xl mb-6 md:rounded-lg"
+            className="max-h-full shadow-xl my-6 md:rounded-lg"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-1">
-          <p className="p-1 md:p-2 md:shadow md:rounded">
-            Reviewed On: <br />
-            {singleReview.reviewedOn}
-          </p>
-          <p className="p-1 md:p-2 md:shadow md:rounded">
-            Release Date:
-            <br /> {singleReview.releaseDate}
-          </p>
-          <p className="p-1 md:p-2 md:shadow md:rounded">
-            Developer: <br /> {singleReview.developer[0]} <br />
-            {singleReview.developer[1]}
-            <br />
-            {singleReview.developer[2]}
-          </p>
-          <p className="p-1 md:p-2 md:shadow md:rounded">
-            Publisher: <br /> {singleReview.publisher[0]}
-            <br />
-            {singleReview.publisher[1]}
-            <br />
-            {singleReview.publisher[2]}
-          </p>
-          <p className="p-1 md:p-2 md:shadow md:rounded">
-            Engine:
-            <br /> {singleReview.engine}
-          </p>
-        </div>
+        <section className="grid grid-cols-1 md:grid-cols-5 gap-1">
+          <div className="p-1 md:p-2 md:shadow md:rounded">
+            <ul>
+              <li>Reviewed On:</li>
+              <li>{singleReview.reviewedOn}</li>
+            </ul>
+          </div>
+
+          <div className="p-1 md:p-2 md:shadow md:rounded">
+            <ul>
+              <li>Release Date:</li>
+              <li>{singleReview.releaseDate}</li>
+            </ul>
+          </div>
+          <div className="p-1 md:p-2 md:shadow md:rounded">
+            <ul>
+              <li>Developer</li>
+              <li>{singleReview.developer[0]}</li>
+              <li>{singleReview.developer[1]}</li>
+              <li>{singleReview.developer[2]}</li>
+            </ul>
+          </div>
+          <div className="p-1 md:p-2 md:shadow md:rounded">
+            <ul>
+              <li>Publisher:</li>
+              <li>{singleReview.publisher[0]}</li>
+              <li>{singleReview.publisher[1]}</li>
+              <li>{singleReview.publisher[2]}</li>
+            </ul>
+          </div>
+          <div className="p-1 md:p-2 md:shadow md:rounded">
+            <ul>
+              <li>Engine:</li>
+              <li>{singleReview.engine}</li>
+            </ul>
+          </div>
+        </section>
       </header>
       <div className="p-10"></div>
-      <article className="flex items-center md:items-start flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-5/6 mx-auto md:border-2 border-gray-600 md:rounded-lg p-6 md:p-10 shadow-xl">
-        {/* Heading */}
-        <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
-          {singleReview.heading}
-        </h1>
-        {/* Article Part 1 */}
-        <p className="md:text-lg">
+      <article className="flex items-center md:items-start flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-11/12 xl:max-w-7xl mx-auto md:border-2 border-gray-600 md:rounded-lg p-6 md:p-10 shadow-xl tracking-wide">
+        <div>
+          {/* Heading */}
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            {singleReview.heading}
+          </h1>
+          {/* Article Part 1 */}
+
           <BlockContent
             blocks={singleReview.article1}
             projectId="qc546n1u"
             dataset="production"
-          />
-        </p>
-      </article>
-      <section>
-        <div>
-          <img
-            src={singleReview.gameLogo.asset.url}
-            alt={singleReview.title}
-            className="max-h-full shadow-xl mb-6 md:rounded-lg"
+            className="md:text-lg"
           />
         </div>
-      </section>
-      <br />
-      <br />
-      <br />
+        <div>
+          {/* Heading 2 */}
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            {singleReview.subHeading2}
+          </h1>
+          {/* Article Part 2 */}
+
+          <BlockContent
+            blocks={singleReview.article2}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </div>
+        <div>
+          {/* Heading 3 */}
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            {singleReview.subHeading3}
+          </h1>
+          {/* Article Part 3 */}
+
+          <BlockContent
+            blocks={singleReview.article3}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </div>
+      </article>
+      <div className="p-10"></div>
+      <article className="flex items-center md:items-start flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-11/12 xl:max-w-7xl mx-auto md:border-2 border-gray-600 md:rounded-lg p-6 md:p-10 shadow-xl tracking-wide">
+        <section>
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            Graphics
+          </h1>
+          <BlockContent
+            blocks={singleReview.graphics}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </section>
+        <section>
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            Sound
+          </h1>
+          <BlockContent
+            blocks={singleReview.sound}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </section>
+        <section>
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            Gameplay
+          </h1>
+          <BlockContent
+            blocks={singleReview.gameplay}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </section>
+        <section>
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            Story
+          </h1>
+          <BlockContent
+            blocks={singleReview.story}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </section>
+      </article>
+      <div className="p-10"></div>
+      <article className="flex items-center md:items-start flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-11/12 xl:max-w-7xl mx-auto md:border-2 border-gray-600 md:rounded-lg p-6 md:p-10 shadow-xl tracking-wide">
+        <section>
+          <h1 className="font-bold text-2xl leading-loose mb-4 items-center">
+            Rating:{' '}
+            <span className="text-green-500"> {singleReview.rating}</span>
+          </h1>
+          <h2 className="font-bold text-2xl leading-loose mb-4 items-center">
+            {singleReview.sumHeading}
+          </h2>
+          <BlockContent
+            blocks={singleReview.summary}
+            projectId="qc546n1u"
+            dataset="production"
+            className="md:text-lg"
+          />
+        </section>
+      </article>
+
+      <div className="p-10"></div>
     </main>
   );
 }
