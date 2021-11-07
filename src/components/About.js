@@ -27,7 +27,10 @@ export default function About() {
                 I am John Swan, the creator of Stockpile Gaming. I created this
                 website to write reviews of both old and new games, news and
                 information that I find interesting, and anything else that
-                comes that I feel would be a good fit for the website.
+                comes that I feel would be a good fit for the website. As far as
+                reviews go, my focus is currently on PC games, however, I will
+                be covering news for consoles and possibly mobile gaming as
+                well.
               </p>
             </div>
           </article>
@@ -78,8 +81,26 @@ export default function About() {
           </aside>
         </div>
         <article className="w-full md:w-4/5 p-4">
-          <h1 className="font-semibold text-lg">Hello</h1>
-          <p></p>
+          <p>
+            I am a new web developer and I wanted to create a long-term project.
+            Stockpile is still very much in development, but it is currently in
+            the MVP stage, which you can read more about{' '}
+            <a
+              href="https://www.stockpilegaming.com/article/website-mvp"
+              className="text-green-300 font-semibold tracking-wider px-2 hover:bg-gray-700 rounded-lg"
+            >
+              HERE
+            </a>
+            I am a life-long gamer, and I play all kinds of games, from JRPGs to
+            Shooters (I don't usually play sports games so I probably won't be
+            reviewing them).
+            <br />
+            <br />
+            Thank-you for stopping by!
+            <br />
+            <br />
+            -John Swan 11/7/2021
+          </p>
         </article>
       </div>
     </main>
