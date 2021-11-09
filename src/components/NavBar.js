@@ -18,7 +18,7 @@ export default function NavBar() {
         <div className="flex flex-col top-0 right-0 z-50">
           <button className="outline-none mobile-menu-button">
             <svg
-              className="w-16 h-16 text-gray-200 "
+              className="w-10 h-10 m-auto text-gray-200 "
               x-show="!showMenu"
               fill="none"
               strokeLinecap="round"
@@ -57,7 +57,7 @@ export default function NavBar() {
               <li>
                 <NavLink to="/about">
                   <SideBarIcon icon={<GiCowled size="32" />} />
-                  <p className="text-xs">About</p>
+                  <p className="text-xs m-1">About</p>
                 </NavLink>
               </li>
             </ul>
