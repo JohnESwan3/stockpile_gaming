@@ -5,14 +5,12 @@ import odysee from '../img/odyseeLogo.svg';
 
 export default function About() {
   return (
-    <main className="bg-gray-900 min-h-screen text-gray-100">
+    <main className="bg-gray-900 min-h-screen flex justify-center  text-gray-100">
       <img
         src={image}
         alt="Background"
         className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50  z-0"
       />
-      <br />
-      <br />
       <div className="relative bg-gray-900 w-full md:w-11/12 lg:10/12 xl:w-3/5 m-auto shadow-none xl:shadow-xl p-4 md:p-6  backdrop-filter bg-opacity-70 backdrop-blur-lg rounded-none md:rounded-xl">
         <div className="flex justify-center">
           <img src={logo} alt="Stockpile Gaming" className="w-full md:w-1/3" />
