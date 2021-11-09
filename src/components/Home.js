@@ -8,7 +8,7 @@ export default function Home() {
       <img
         src={bgwebp}
         alt="Background"
-        className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50 z-0"
+        className="fixed object-cover w-full h-full before:absolute before:inset-0 filter brightness-50 z-0 top-0"
       />
       <section className="relative flex-column justify-center text-center pt-12 px-8 ">
         <img

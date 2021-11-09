@@ -9,6 +9,9 @@ import SignUp from './components/SignUp.js';
 import LogIn from './components/LogIn.js';
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer.js';
+import ReactGA from 'react-ga';
+const TRACKING_ID = 'G-2N4L7ETVVV';
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   return (
