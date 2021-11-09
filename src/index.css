@@ -2,6 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2
+      mx-auto shadow-lg bg-gray-900 text-green-500 hover:bg-green-600 hover:rounded-xl rounded-3xl hover:text-gray-100 transition-all duration-300 ease-linear cursor-pointer;
+  }
+  .sidebar-icon-logo {
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2
+      mx-auto shadow-lg bg-gray-900  hover:bg-gray-600 hover:rounded-xl rounded-3xl  transition-all duration-300 ease-linear cursor-pointer;
+  }
+}
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
 }

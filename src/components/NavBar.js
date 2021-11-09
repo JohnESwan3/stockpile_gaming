@@ -1,78 +1,25 @@
+import SPLogo from '../img/SPLogo.svg';
 import { NavLink } from 'react-router-dom';
+// import {
+//   FaFacebookF,
+//   FaTelegramPlane,
+//   FaTwitter,
+//   FaInstagram,
+//   FaYoutube,
+// } from 'react-icons/fa';
+import { GiConsoleController, GiCowled } from 'react-icons/gi';
+// import { SiOdysee } from 'react-icons/si';
+import { MdArticle } from 'react-icons/md';
 
 export default function NavBar() {
   return (
-    <nav className="bg-gray-800 shadow-lg sticky top-0 z-50 border-b-2 border-gray-700">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between">
-          <div className="flex space-x-7">
-            <div>
-              <div className="flex items-center py-4 px-2">
-                <NavLink
-                  to="/"
-                  exact
-                  className="font-semibold text-green-400 text-lg tracking-widest hover:text-green-200"
-                >
-                  Stockpile
-                </NavLink>
-              </div>
-            </div>
-            {/* Primary Nav Links */}
-            <div className="hidden md:flex items-center space-x-1">
-              <NavLink
-                to="/"
-                exact
-                className="my-4 px-1 text-gray-100 font-semibold text-lg hover:text-green-200 transition duration-300"
-                activeClassName="text-green-200 border-b-2 border-green-200"
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/review"
-                className="my-4 px-1  text-gray-100 font-semibold text-lg hover:text-green-200 transition duration-300"
-                activeClassName="text-green-200 border-b-2 border-green-200"
-              >
-                Reviews
-              </NavLink>
-              <NavLink
-                to="/article"
-                className="my-4 px-1  text-gray-100 font-semibold text-lg hover:text-green-200 transition duration-300"
-                activeClassName="text-green-200 border-b-2 border-green-200"
-              >
-                Articles
-              </NavLink>
-
-              <NavLink
-                to="/about"
-                className="my-4 px-1  text-gray-100 font-semibold text-lg hover:text-green-200 transition duration-300"
-                activeClassName="text-green-200 border-b-2 border-green-200"
-              >
-                About
-              </NavLink>
-            </div>
-          </div>
-          {/* Login */}
-          {/* <div className="hidden md:flex items-center space-x-3">
-            <NavLink
-              to="/login"
-              className="py-2 px-2 font-medium text-gray-300 rounded hover:bg-green-600 hover:text-white transition duration-300"
-              activeClassName="bg-green-600"
-            >
-              Log In
-            </NavLink>
-            <NavLink
-              to="/signup"
-              className="py-2 px-2 font-medium text-white rounded hover:bg-green-600 transition duration-300"
-              activeClassName="bg-green-600"
-            >
-              Sign Up
-            </NavLink>
-          </div> */}
-          {/* Mobile Menue Button */}
-          <div className="md:hidden flex items-center">
+    <nav className="">
+      <div className="">
+        <div className="menu-bar flex flex-col top-0 right-0 fixed z-50  w-16 m-0 bg-gray-800 border-r-2 border-gray-700 shadow-xl text-gray-100">
+          <div className="flex flex-col top-0 right-0 z-50">
             <button className="outline-none mobile-menu-button">
               <svg
-                className="w-6 h-6 text-gray-200 hover:text-green-500"
+                className="w-16 h-16 text-gray-200 hover:text-green-500"
                 x-show="!showMenu"
                 fill="none"
                 strokeLinecap="round"
@@ -84,51 +31,41 @@ export default function NavBar() {
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
-          </div>
-          {/* Mobile Menu */}
-          <div className="hidden mobile-menu ">
-            <ul className=" flex flex-row mt-1 gap-1">
-              <li>
-                <NavLink
-                  to="/"
-                  exact
-                  className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
-                  activeClassName="bg-green-600 text-white"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/review"
-                  className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
-                  activeClassName="bg-green-600 text-white"
-                >
-                  Review
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/article"
-                  className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
-                  activeClassName="bg-green-600 text-white"
-                >
-                  Articles
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/about"
-                  className="block text-sm px-2 py-4 text-gray-200 bg-gray-700 font-semibold hover:bg-green-600 transition duration:300"
-                  activeClassName="bg-green-600 text-white"
-                >
-                  About
-                </NavLink>
-              </li>
-            </ul>
+            <div className="hidden mobile-menu ">
+              <ul>
+                <li>
+                  <NavLink to="/" exact className="">
+                    <img
+                      src={SPLogo}
+                      alt=""
+                      className="p-1 sidebar-icon-logo"
+                    />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/review">
+                    <SideBarIcon icon={<GiConsoleController size="32" />} />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/article">
+                    <SideBarIcon icon={<MdArticle size="32" />} />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about">
+                    <SideBarIcon icon={<GiCowled size="32" />} />
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </nav>
   );
 }
+
+const SideBarIcon = ({ icon, text = 'tooltip' }) => (
+  <div className="sidebar-icon group">{icon}</div>
+);

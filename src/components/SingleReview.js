@@ -210,6 +210,7 @@ export default function SingleReview() {
           />
         </div>
       </article>
+
       <div className="p-10"></div>
       <article className="flex items-center md:items-start flex-col relative bg-gray-800 text-gray-100 leading-loose w-full md:w-11/12 xl:max-w-7xl mx-auto md:border-2 border-gray-600 md:rounded-lg p-6 md:p-10 shadow-xl tracking-wide">
         <section>
