@@ -78,7 +78,6 @@ export default {
       of: [
         {
           type: 'block',
-          title: 'Block',
           styles: [
             { title: 'Normal', value: 'normal' },
             { title: 'H1', value: 'h1' },
@@ -121,6 +120,7 @@ export default {
           title: 'Main Image',
           options: { hotspot: true },
         },
+        { type: 'code' },
       ],
     },
     {

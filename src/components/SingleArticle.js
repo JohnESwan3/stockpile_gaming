@@ -95,7 +95,7 @@ export default function SingleArticle() {
             blocks={singleArticle.article}
             projectId="qc546n1u"
             dataset="production"
-            className="p-6 m-auto w-auto md:w-10/12 shadow  text-lg tracking-wide leading-relaxed"
+            className="article p-6 m-auto w-auto md:w-10/12 shadow  text-lg tracking-wide leading-relaxed"
           />
         </article>
         {/* <section>
