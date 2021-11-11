@@ -16,6 +16,7 @@
   width: 0; /* Remove scrollbar space */
 }
 /* Sanity Block Content Article Styling */
+
 .article p {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
@@ -33,3 +34,11 @@
 .article a {
   color: rgba(96, 165, 250, var(--tw-text-opacity));
 }
+
+@media (max-width: 767px) {
+  .article h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Sanity Block Content Review Styling */
