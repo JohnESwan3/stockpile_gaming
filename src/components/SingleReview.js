@@ -3,6 +3,7 @@ import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
 // import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
+import Time from 'react-time-format';
 
 // const builder = imageUrlBuilder(sanityClient);
 // function urlFor(source) {
@@ -131,7 +132,9 @@ export default function SingleReview() {
           <div className="p-1 md:p-2 md:shadow md:rounded">
             <ul>
               <li>Reviewed On:</li>
-              <li>{singleReview.reviewedOn}</li>
+              <li>
+                <Time value={singleReview.reviewedOn} format="MM-DD-YYYY" />
+              </li>
             </ul>
           </div>
 

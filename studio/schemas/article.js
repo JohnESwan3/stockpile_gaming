@@ -54,13 +54,31 @@ export default {
         hotspot: true,
       },
     },
+    // Cant figure out how to reformat sanity dates. This is an awful workaround but Sanity documentation sucks
     {
       name: 'publishDate',
       title: 'Publish Date',
-      type: 'date',
+      type: 'datetime',
       options: {
         dateFormat: 'MM-DD-YYYY',
+        timeFormat: 'HH:mm',
+        calendarTodayLabel: 'Today',
       },
+    },
+    {
+      name: 'publishMonth',
+      title: 'Publish Month',
+      type: 'number',
+    },
+    {
+      name: 'publishDay',
+      title: 'Publish Day',
+      type: 'number',
+    },
+    {
+      name: 'publishYear',
+      title: 'Publish Year',
+      type: 'number',
     },
     {
       name: 'tags',

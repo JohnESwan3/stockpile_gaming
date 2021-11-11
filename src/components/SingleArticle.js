@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
+import Time from 'react-time-format';
 // import PortableText from 'react-portable-text';
 
 export default function SingleArticle() {
@@ -12,15 +13,18 @@ export default function SingleArticle() {
     sanityClient
       .fetch(
         `*[slug.current =="${slug}"] {
-        title,
-        _id,
+          title,
+          _id,
         slug,
         "name": author->name,
         "authorImage": author->image,
         "type": category->title,
         publishDate,
+        publishMonth,
+        publishDay,
+        publishYear,
         tags,
-       article,
+        article,
         bannerImage{
           asset->{
             _id,
@@ -85,7 +89,9 @@ export default function SingleArticle() {
                 {singleArticle.title}
               </h1>
               <p>
-                {singleArticle.name}&nbsp; | &nbsp;{singleArticle.publishDate}
+                {singleArticle.name}&nbsp; | &nbsp;
+                {singleArticle.publishMonth}-{singleArticle.publishDay}-
+                {singleArticle.publishYear}
               </p>
             </div>
           </section>

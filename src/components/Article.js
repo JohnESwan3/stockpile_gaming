@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import sanityClient from '../client.js';
 import BlockContent from '@sanity/block-content-to-react';
+import Time from 'react-time-format';
 
 export default function Article() {
   const [articleData, setArticleData] = useState(null);
@@ -15,6 +16,9 @@ export default function Article() {
         "name": author->name,
         "authorImage":author->image,
         publishDate,
+        publishMonth,
+        publishDay,
+        publishYear,
         description,
         "type": category->title,
         tags,
@@ -79,7 +83,8 @@ export default function Article() {
                         />
                         <p className="text-sm text-gray-300">
                           {article.name}&nbsp; | &nbsp;
-                          {article.publishDate}
+                          {article.publishMonth}-{article.publishDay}-
+                          {article.publishYear}
                         </p>
                       </div>
                     </div>
