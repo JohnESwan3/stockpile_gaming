@@ -15,7 +15,14 @@ export default function Review() {
         description,
         genre,
         subGenre,
-        publishedOn,
+        publishDate,
+      publishMonth,
+      publishDay,
+      publishYear,
+      releaseDate,
+      releaseMonth,
+      releaseDay,
+      releaseYear,
         summary,
         coverImage {
           asset->{

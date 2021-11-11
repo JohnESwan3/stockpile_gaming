@@ -3,7 +3,6 @@ import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
 // import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
-import Time from 'react-time-format';
 
 // const builder = imageUrlBuilder(sanityClient);
 // function urlFor(source) {
@@ -30,8 +29,14 @@ export default function SingleReview() {
       },
       "name": author->name,
       "authorImage":author->image,
-      publishedOn,
+      publishDate,
+      publishMonth,
+      publishDay,
+      publishYear,
       releaseDate,
+      releaseMonth,
+      releaseDay,
+      releaseYear,
       price,
       affiliate,
       bgImage{
@@ -133,7 +138,8 @@ export default function SingleReview() {
             <ul>
               <li>Reviewed On:</li>
               <li>
-                <Time value={singleReview.reviewedOn} format="MM-DD-YYYY" />
+                {singleReview.publishMonth}-{singleReview.publishDay}-
+                {singleReview.publishYear}
               </li>
             </ul>
           </div>
@@ -141,7 +147,10 @@ export default function SingleReview() {
           <div className="p-1 md:p-2 md:shadow md:rounded">
             <ul>
               <li>Release Date:</li>
-              <li>{singleReview.releaseDate}</li>
+              <li>
+                {singleReview.releaseMonth}-{singleReview.releaseDay}-
+                {singleReview.releaseYear}
+              </li>
             </ul>
           </div>
           <div className="p-1 md:p-2 md:shadow md:rounded">

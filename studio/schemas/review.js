@@ -97,21 +97,57 @@ export default {
         hotspot: true,
       },
     },
+    // Cant figure out how to reformat sanity dates. This is an awful workaround but Sanity documentation sucks
     {
-      name: 'publishedOn',
-      title: 'Published On',
-      type: 'date',
+      name: 'publishDate',
+      title: 'Publish Date',
+      type: 'datetime',
       options: {
         dateFormat: 'MM-DD-YYYY',
+        timeFormat: 'HH:mm',
+        calendarTodayLabel: 'Today',
       },
     },
     {
+      name: 'publishMonth',
+      title: 'Publish Month',
+      type: 'number',
+    },
+    {
+      name: 'publishDay',
+      title: 'Publish Day',
+      type: 'number',
+    },
+    {
+      name: 'publishYear',
+      title: 'Publish Year',
+      type: 'number',
+    },
+
+    {
       name: 'releaseDate',
-      title: 'Release Date',
-      type: 'date',
+      title: 'release Date',
+      type: 'datetime',
       options: {
         dateFormat: 'MM-DD-YYYY',
+        timeFormat: 'HH:mm',
+        calendarTodayLabel: 'Today',
       },
+    },
+    {
+      name: 'releaseMonth',
+      title: 'release Month',
+      type: 'number',
+    },
+    {
+      name: 'releaseDay',
+      title: 'release Day',
+      type: 'number',
+    },
+    {
+      name: 'releaseYear',
+      title: 'release Year',
+      type: 'number',
     },
     {
       name: 'price',

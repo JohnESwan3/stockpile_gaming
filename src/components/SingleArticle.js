@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
-import Time from 'react-time-format';
 // import PortableText from 'react-portable-text';
 
 export default function SingleArticle() {
