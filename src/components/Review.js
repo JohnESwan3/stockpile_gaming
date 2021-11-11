@@ -9,7 +9,7 @@ export default function Review() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type =="review"]{
+        `*[_type =="review"]  | order(title){
         title,
         slug,
         description,
