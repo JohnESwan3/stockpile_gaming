@@ -9,7 +9,7 @@ export default function Article() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type =="article"]{
+        `*[_type =="article"]  | order(publishDate desc){
         title,
         slug,
         "name": author->name,
