@@ -190,7 +190,7 @@ export default function SingleReview() {
             blocks={singleReview.article1}
             projectId="qc546n1u"
             dataset="production"
-            className="md:text-lg"
+            className="md:text-lg article"
           />
         </div>
         <div>

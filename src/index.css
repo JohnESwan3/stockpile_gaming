@@ -20,15 +20,18 @@
 .article p {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
+  letter-spacing: 1px;
 }
 .article h1 {
   font-size: 2rem;
   padding: 0;
+  font-weight: bold;
 }
 
 .article li {
   list-style: disc;
   margin-left: 2rem;
+  letter-spacing: 1px;
 }
 
 .article a {

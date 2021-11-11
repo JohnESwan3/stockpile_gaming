@@ -62,7 +62,7 @@ export default function SingleArticle() {
     <main className="bg-gray-900 min-h-screen text-gray-100">
       <div className="4xl:m-auto w-full 4xl:w-5/6">
         <header className="m-auto">
-          <section className="relative py-24 px-4">
+          <section className="relative p-10 md:p-24">
             <div className="absolute inset-0 h-auto">
               <img
                 src={singleArticle.bannerImage.asset.url}
