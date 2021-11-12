@@ -23,7 +23,8 @@
 }
 .article h1 {
   font-size: 2rem;
-  padding: 0;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
   font-weight: bold;
 }
 .article img {

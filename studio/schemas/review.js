@@ -325,8 +325,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -380,8 +395,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -435,8 +465,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -485,8 +530,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -535,8 +595,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -585,8 +660,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -635,8 +725,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },
@@ -704,8 +809,23 @@ export default {
         },
         {
           type: 'image',
-          title: 'Main Image',
+          title: 'Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
       ],
     },

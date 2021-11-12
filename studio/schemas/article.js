@@ -45,6 +45,21 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: 'attribution',
+          type: 'string',
+          title: 'Attribution',
+        },
+      ],
     },
     {
       name: 'image',
@@ -53,6 +68,21 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: 'attribution',
+          type: 'string',
+          title: 'Attribution',
+        },
+      ],
     },
     // Cant figure out how to reformat sanity dates. This is an awful workaround but Sanity documentation sucks
     {
@@ -137,6 +167,21 @@ export default {
           type: 'image',
           title: 'Main Image',
           options: { hotspot: true },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              options: {
+                isHighlighted: true,
+              },
+            },
+            {
+              name: 'attribution',
+              type: 'string',
+              title: 'Attribution',
+            },
+          ],
         },
         { type: 'code' },
       ],
