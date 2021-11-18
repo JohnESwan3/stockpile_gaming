@@ -178,7 +178,7 @@ export default function SingleReview() {
           </section>
 
           {/* Game Info - Hidden by Button - Grid + Tailwind NOT WORKING!!!! */}
-          <section className="flex flex-col text-center 2xl:text-left p-4 shadow-xl">
+          <section className="flex flex-col p-4 shadow-xl">
             <div className="p-2">
               <h1 className="text-3xl tracking-wide ">Platforms</h1>
               <p className="py-2">
@@ -217,7 +217,7 @@ export default function SingleReview() {
           </section>
         </header>
         {/* Spacer - To Show BG-Image */}
-        <div className="p-8"></div>
+        <div className="p-16"></div>
 
         {/* Article Part 1 */}
         <section className="relative article bg-gray-900 py-4 px-1 md:p-4">
@@ -232,7 +232,7 @@ export default function SingleReview() {
         </section>
 
         {/* Spacer - To Show BG-Image */}
-        <div className="p-8"></div>
+        <div className="p-16"></div>
 
         {/* Article Part 2 */}
         <section className="relative article bg-gray-900 py-4 px-1 md:p-4">
@@ -247,7 +247,7 @@ export default function SingleReview() {
         </section>
 
         {/* Spacer - To Show BG-Image */}
-        <div className="p-8"></div>
+        <div className="p-16"></div>
 
         {/* Article Summary */}
         <section className="relative article bg-gray-900 py-4 px-1 md:p-4">
@@ -261,7 +261,7 @@ export default function SingleReview() {
           </article>
         </section>
       </div>
-      <div className="p-8"></div>
+      <div className="h-screen"></div>
     </main>
   );
 }
