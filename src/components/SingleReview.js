@@ -49,12 +49,6 @@ export default function SingleReview() {
           url
         }
       },
-      gameLogo{
-        asset->{
-          _id,
-          url
-        }
-      },
       hero{
         asset->{
           _id,

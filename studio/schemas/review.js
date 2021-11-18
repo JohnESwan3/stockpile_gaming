@@ -20,6 +20,12 @@ export default {
       },
     },
     {
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: { type: 'category' },
+    },
+    {
       name: 'author',
       title: 'Author',
       type: 'reference',
@@ -168,14 +174,6 @@ export default {
       },
     },
     {
-      name: 'gameLogo',
-      title: 'Game Logo',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
       name: 'hero',
       title: 'Hero Image',
       type: 'image',
@@ -252,12 +250,6 @@ export default {
           { value: 'Nintendo 3DS', title: 'Nintendo 3DS' },
         ],
       },
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: { type: 'category' },
     },
     {
       name: 'tags',
