@@ -98,53 +98,6 @@ export default function SingleArticle() {
                 {singleArticle.publishMonth}-{singleArticle.publishDay}-
                 {singleArticle.publishYear}
               </p>
-              {/* Social Media Sharing */}
-              <div className="w-48 mx-auto mt-4 bg-gray-900 gap-2 rounded-lg text-center shadow-lg">
-                <h1 className="p-2">SHARE ON:</h1>
-                <FacebookShareButton
-                  quote={singleArticle.title}
-                  hashtag={singleArticle.tags[0]}
-                  url={'https://www.stockpilegaming.com/article/' + `${slug}`}
-                >
-                  <FaFacebook
-                    style={{
-                      height: 30,
-                      width: 30,
-                      color: '#3b5998',
-                      margin: '.5rem',
-                    }}
-                  />
-                </FacebookShareButton>
-                <TwitterShareButton
-                  title={singleArticle.title}
-                  hastags={singleArticle.tags[0]}
-                  url={'https://www.stockpilegaming.com/article/' + `${slug}`}
-                >
-                  <FaTwitter
-                    style={{
-                      height: 30,
-                      width: 30,
-                      color: '#1da1f2',
-                      margin: '.5rem',
-                    }}
-                  />
-                </TwitterShareButton>
-                <TelegramShareButton
-                  title={singleArticle.title}
-                  url={'https://www.stockpilegaming.com/article/' + `${slug}`}
-                >
-                  <FaTelegramPlane
-                    style={{
-                      backgroundColor: '#0088CC',
-                      height: 30,
-                      width: 30,
-                      padding: 5,
-                      borderRadius: 100,
-                      margin: '.5rem',
-                    }}
-                  />
-                </TelegramShareButton>
-              </div>
             </div>
           </section>
         </header>
@@ -156,6 +109,53 @@ export default function SingleArticle() {
             className="article p-3 md:p-6 m-auto w-auto md:w-10/12 shadow  text-md md:text-lg tracking-wide leading-relaxed"
           />
         </article>
+        <section>
+          {/* Social Media Sharing */}
+          <div className=" mx-auto mt-4 py-8 bg-gray-900 gap-2 rounded-lg text-center shadow-lg">
+            <h1 className="p-2">SHARE ON:</h1>
+            <FacebookShareButton
+              quote={singleArticle.title}
+              url={'https://www.stockpilegaming.com/article/' + `${slug}`}
+            >
+              <FaFacebook
+                style={{
+                  height: 50,
+                  width: 50,
+                  color: '#3b5998',
+                  margin: '.5rem',
+                }}
+              />
+            </FacebookShareButton>
+            <TwitterShareButton
+              title={singleArticle.title}
+              url={'https://www.stockpilegaming.com/article/' + `${slug}`}
+            >
+              <FaTwitter
+                style={{
+                  height: 50,
+                  width: 50,
+                  color: '#1da1f2',
+                  margin: '.5rem',
+                }}
+              />
+            </TwitterShareButton>
+            <TelegramShareButton
+              title={singleArticle.title}
+              url={'https://www.stockpilegaming.com/article/' + `${slug}`}
+            >
+              <FaTelegramPlane
+                style={{
+                  backgroundColor: '#0088CC',
+                  height: 50,
+                  width: 50,
+                  padding: 5,
+                  borderRadius: 100,
+                  margin: '.5rem',
+                }}
+              />
+            </TelegramShareButton>
+          </div>
+        </section>
         {/* <section>
           <div className="flex justify-center ">
             <img
