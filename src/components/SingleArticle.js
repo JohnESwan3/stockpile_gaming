@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js';
 import { useParams } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
+import {
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+} from 'react-share';
+import { FaFacebook, FaTwitter, FaTelegramPlane } from 'react-icons/fa';
 // import PortableText from 'react-portable-text';
 
 export default function SingleArticle() {
@@ -92,6 +98,53 @@ export default function SingleArticle() {
                 {singleArticle.publishMonth}-{singleArticle.publishDay}-
                 {singleArticle.publishYear}
               </p>
+              {/* Social Media Sharing */}
+              <div className="w-48 mx-auto mt-4 bg-gray-900 gap-2 rounded-lg text-center shadow-lg">
+                <h1 className="p-2">SHARE ON:</h1>
+                <FacebookShareButton
+                  quote={singleArticle.title}
+                  hashtag={singleArticle.tags[0]}
+                  url={'https://www.stockpilegaming.com/article/' + `${slug}`}
+                >
+                  <FaFacebook
+                    style={{
+                      height: 30,
+                      width: 30,
+                      color: '#3b5998',
+                      margin: '.5rem',
+                    }}
+                  />
+                </FacebookShareButton>
+                <TwitterShareButton
+                  title={singleArticle.title}
+                  hastags={singleArticle.tags[0]}
+                  url={'https://www.stockpilegaming.com/article/' + `${slug}`}
+                >
+                  <FaTwitter
+                    style={{
+                      height: 30,
+                      width: 30,
+                      color: '#1da1f2',
+                      margin: '.5rem',
+                    }}
+                  />
+                </TwitterShareButton>
+                <TelegramShareButton
+                  title={singleArticle.title}
+                  url={'https://www.stockpilegaming.com/article/' + `${slug}`}
+                >
+                  <FaTelegramPlane
+                    style={{
+                      backgroundColor: '#0088CC',
+                      height: 30,
+                      width: 30,
+                      padding: 5,
+                      borderRadius: 100,
+                      margin: '.5rem',
+                    }}
+                  />
+                </TelegramShareButton>
+              </div>
             </div>
           </section>
         </header>
